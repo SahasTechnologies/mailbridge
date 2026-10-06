@@ -1,0 +1,8 @@
+# Secrets — never commit the real env file
+.env
+.env.bak
+
+# Build output
+/mailbridge
+*.exe
+/out/

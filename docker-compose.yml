@@ -1,0 +1,15 @@
+services:
+  mailbridge:
+    build: .
+    image: mailbridge-mailbridge:latest
+    container_name: mailbridge
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - /share/CACHEDEV1_DATA/mailbridge:/data
+    networks:
+      - caddy_net
+
+networks:
+  caddy_net:
+    external: true
